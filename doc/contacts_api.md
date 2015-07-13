@@ -17,7 +17,7 @@ recipient_id   | id of the person who receives the contact.                     
 status         | status of the contact. For possible values use the Contact Statuses API.                        |  Y       | N        | not_interested               |
 broadcaster_id | id of the broadcaster on whose behalf the sender made the contact                               |  Y       | N        | 8123                         |
 note           | note about the content of the contact                                                           |  Y       | N        | He did not support the cause |
-created_at     | timestamp representing when the contact was created                                             |  N       | N        | 2014-02-14T14:36:29-05:00    |
+created_at     | timestamp representing when the contact was created                                             |  Y       | N        | 2014-02-14T14:36:29-05:00    |
 
 Index Endpoint
 --------------
