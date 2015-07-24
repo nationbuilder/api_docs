@@ -1,5 +1,9 @@
 Donations API
 ==========
+```
+In order to use the Donations API, you should first get the donor_id's (NationBuilder ID's) for the people to whom donations are to be attributed. You'll use our [People endpoints](http://nationbuilder.com/people_api) for this, such as Match, which supports a person lookup based on name, phone number or email address. If the person you'd like to attach a donation to does not already exist, you'll want to add them using the Create, Push, or Add endpoints.
+```
+
 
 Resources
 ---------
@@ -35,9 +39,9 @@ Name                      | Description                                         
 `payment_type_name`       | name of the [payment type](http://nationbuilder.com/what_are_the_valid_payment_types_for_imports)                          | Y         | Y<sup>4</sup>  | Check
 `payment_type_ngp_code`   | code of the [payment type](http://nationbuilder.com/what_are_the_valid_payment_types_for_imports)                          | Y         | Y<sup>4</sup>  | K
 `pledge_id`               | the id of the pledge this donation fulfills.  Pledges are promises received from supporters to donate money in the future. | N         | N              | 129
-`recruiter_name_or_email` | recruiter's name or email address                                                                                          | Y         | N<sup>3</sup>  | Hayden Johns
+`recruiter_name_or_email` | recruiter's name or email address (will also be credited as the fundraiser for this donation)                              | Y         | N<sup>5</sup>  | haydenjohns@example.com
 `recurring_donation_id`   | an id present if the donation is recurring                                                                                 | N         | N<sup>6</sup>  | 89
-`succeeded_at`            | timestamp representing when the donation succeeded                                                                         | Y         | N<sup>5</sup>  | 2013-02-21T10:04:15-05:00
+`succeeded_at`            | timestamp representing when the donation succeeded                                                                         | Y         | N<sup>7</sup>  | 2013-02-21T10:04:15-05:00
 `tracking_code_slug`      | tracking code for this donation                                                                                            | Y         | N              | vip
 `updated_at`              | timestamp representing when the donation was last updated                                                                  | N         | N              | 2014-02-14T14:36:29-05:00
 `work_address`            | an address resource representing the work address                                                                          | Y         | N              | (see Address Resource)
@@ -45,8 +49,10 @@ Name                      | Description                                         
 \[2\]: it is strongly recommended to specify this field. If omitted, `email` or `first_name` and `last_name` become required and a new Person may be created.<br/>
 \[3\]: use the `donor_id` field instead to specify a donor. By specifying any of these fields you override the value of the same field on the donor.<br/>
 \[4\]: default: Cash (C). It is strongly recommended to specify one of these fields.<br/>
-\[5\]: if omitted the donation will be considered failed.
-\[6\]: this field is for internal use only.
+\[5\]: if a recruiter already exists on the person this will not change that, the person included here would then be credited as only the fundraiser.<br/>
+\[6\]: this field is for internal use only.<br/>
+\[7\]: if omitted the donation will be considered failed.
+
 
 These fields are always visible but contain null values unless the Voter addon is enabled:
 
