@@ -2755,6 +2755,26 @@ DELETE /api/v1/people/:person_id/taggings
 }
 ```
 
+Private Notes
+-------------
+
+Create
+------
+
+```
+POST /api/v1/people/:person_id/notes
+```
+
+### Example
+
+```json
+{
+  "note": {
+    "content": "Seems likely to be a supporter"
+  }
+}
+```
+
 Custom Fields
 -------------
 [Custom fields](http://nationbuilder.com/custom_fields) can be set in the API, and will also be included in all person resource responses.
