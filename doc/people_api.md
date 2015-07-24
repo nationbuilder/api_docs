@@ -285,7 +285,7 @@ Resources
 * `country_code` - country code for the country the ballot was cast (required),
 * `election_at` - when the election was held (required),
 * `election_period` - the type of election (g, p, pp, or s),
-* `party` - political party (US only: American Independent, Constitutional, Democrat, Green, Independent, Justice, Libertarian, Peace and Freedom, Reform, Republican, Undeclared, Working Families or Other),
+* `party` - party for primary elections (http://nationbuilder.com/political_party_codes),
 * `state` - which state the election was held in (required for US elections),
 * `vote_method` - how the ballot was cast (required)
 
