@@ -12,6 +12,7 @@ Resources
 * `author` -  an abbreviated person resource representing the person who created this person’s record
 * `auto_import_id` - the ID given to a signup when a person is auto imported
 * `availability` - date and time this person is available (such as for volunteer shifts)
+* `ballots` - an array of ballot resources representing votes in elections
 * `banned_at` - the time and date this person was banned
 * `billing_address` - an address resource representing this person’s billing address
 * `bio` - the bio information that this person provided on their public profile via the “short bio” field
@@ -86,12 +87,16 @@ Resources
 * `invoice_payments_referred_amount_in_cents` - the aggregate amount of invoice payments made by recruits of this person (cents)
 * `invoices_amount_in_cents` - the aggregate amount of all of this person’s invoices (cents)
 * `invoices_count` - the number of invoices this person has
+* `is_absentee_voter` - a boolean field that indicates if the person votes absentee
+* `is_active_voter` - a boolean field that indicates if the person is actively voting
 * `is_deceased` - a boolean field that indicates if the person is alive or not
 * `is_donor` - a boolean field that indicates if the person has donated
+* `is_early_voter` - a boolean field that indicates if the person votes early
 * `is_fundraiser` - a boolean value that indicates if this person has previously fundraised
 * `is_ignore_donation_limits` - a boolean that indicates whether this person is not subject to donation limits associated with the nation
 * `is_leaderboardable` - a boolean that tells if this person is allowed to show up on the leaderboard
 * `is_mobile_bad` - a boolean reflecting whether this person’s cell number is invalid
+* `is_permanent_absentee_voter` - a boolean field that indicates if the person has registered as a permanent absentee voter
 * `is_possible_duplicate` - a boolean field that indicates if the NationBuilder matching algorithm thinks this person is a match to someone else in the nation
 * `is_profile_private` - a boolean that tells if this person’s profile is private
 * `is_profile_searchable` - a boolean that tells if this person’s profile is allowed to show up in search results
@@ -198,6 +203,7 @@ Resources
 * `username` - this person’s NationBuilder username
 * `van_id` - this person’s ID from VAN
 * `village_district` - a district field
+* `voter_updated_at` - the last time voter data was gathered for this person
 * `warnings_count` - the number of warnings this person has received
 * `website` - the URL of this person’s website
 * `work_address` - an address resource representing this person’s work address
@@ -272,6 +278,16 @@ Resources
 * `country_code` - country code
 * `lat` - latitude (using WGS-84)
 * `lng` - longitude (using WGS-84)
+
+### Ballot Resource
+
+* `cast_at` - when the ballot was cast,
+* `country_code` - country code for the country the ballot was cast (required),
+* `election_at` - when the election was held (required),
+* `election_period` - the type of election (g, p, pp, or s),
+* `party` - party for primary elections (http://nationbuilder.com/political_party_codes),
+* `state` - which state the election was held in (required for US elections),
+* `vote_method` - how the ballot was cast (required)
 
 
 Index Endpoint
