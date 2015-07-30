@@ -284,7 +284,7 @@ Resources
 * `cast_at` - when the ballot was cast,
 * `country_code` - country code for the country the ballot was cast (required),
 * `election_at` - when the election was held (required),
-* `election_period` - the type of election (General, Primary, Presidential Primary, or Special),
+* `election_period` - the type of election (General, Primary, Presidential Primary, or Special, not required for international elections),
 * `party` - party for primary elections (http://nationbuilder.com/political_party_codes),
 * `state` - which state the election was held in (required for US elections),
 * `vote_method` - how the ballot was cast (required)
