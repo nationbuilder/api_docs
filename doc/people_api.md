@@ -289,6 +289,26 @@ Resources
 * `state` - which state the election was held in (required for US elections),
 * `vote_method` - how the ballot was cast (required)
 
+Count Endpoint
+--------------
+
+The count endpoint provides a total count of all the people in the nation.
+
+```
+GET /api/v1/people/count
+```
+
+### Example
+
+```
+GET https://foobar.nationbuilder.com/api/v1/people/count
+```
+
+```json
+{
+  "people_count": 90013
+}
+```
 
 Index Endpoint
 --------------

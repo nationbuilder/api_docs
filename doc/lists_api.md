@@ -39,7 +39,6 @@ Should result in this response:
       "name": "New Voters",
       "slug": "newvoters",
       "author_id": 1,
-      "sort_order": "oldest_first",
       "count": 5
     },
     {
@@ -47,7 +46,6 @@ Should result in this response:
       "name": "Famous Minnesotans",
       "slug": "minnesotans",
       "author_id": 15236,
-      "sort_order": "oldest_first",
       "count": 21
     },
     {
@@ -55,7 +53,6 @@ Should result in this response:
       "name": "Donors",
       "slug": "donors",
       "author_id": 15236,
-      "sort_order": "oldest_first",
       "count": 101
     }
   ]
@@ -156,7 +153,6 @@ Should result in this response:
     "name": "My List",
     "slug": "mylist",
     "author_id": 17736,
-    "sort_order": "street_address",
     "count": 0
   }
 }
@@ -211,7 +207,6 @@ results in:
   "name": "my list",
   "slug": "my-list",
   "author_id": 2,
-  "sort_order": "oldest_first",
   "count": 3
 }
 ```
@@ -248,7 +243,6 @@ results in:
   "name": "my list",
   "slug": "my-list",
   "author_id": 2,
-  "sort_order": "oldest_first",
   "count": 0
 }
 ```
