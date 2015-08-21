@@ -96,7 +96,7 @@ POST /api/v1/sites/:site_slug/pages/blogs
 ### Attributes:
 * blog attributes - the properties you wish to attach to the blog to be made
     * slug - the path at which to place the page.  Must be unique, and there are some restrictions for namespace collisions. (Optional- will be computed from name if not present)
-    * status - published or drafted, depending on whether you want to page to be available immediately (required)
+    * status - published or unlisted, depending on whether you want to page to be available immediately (required)
     * author_id - the NationBuilder id author of the blog (optional)
     * name - internal name, how the page will be referred to in lists in the control panel (required)
     * title - Title of the page, shows up as tab name, for example (optional, defaults to the name)

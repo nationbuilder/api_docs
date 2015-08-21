@@ -156,7 +156,7 @@ POST https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events
 ```json
 {
   "event": {
-    "status": "drafted",
+    "status": "unlisted",
     "name": "Fasting Day",
     "intro": "Take the 24hr nofoodchallenge!!!",
     "time_zone": "-07:00",
@@ -212,7 +212,7 @@ GET https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events/1
   "event": {
     "id": 1,
     "slug": "foobar",
-    "status": "drafted",
+    "status": "unlisted",
     "site_slug": "foobar",
     "name": "foobar",
     "headline": "foobar",

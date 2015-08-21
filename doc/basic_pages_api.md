@@ -68,7 +68,7 @@ POST /api/v1/sites/:site_slug/pages/basic_pages
 * basic_page attributes - the properties you wish to attach to the basic page being made
     * slug - the path at which to place the page.  Must be unique, and there are some restrictions for namespace collisions. (Optional- will be computed from name if not present)
     * content - the content html to have on the page.  There is a whitelist of html elements and attributes that are allowed.
-    * status - published or drafted, depending on whether you want to page to be available immediately (required)
+    * status - published or unlisted, depending on whether you want to page to be available immediately (required)
     * name - internal name, how the page will be referred to in lists in the control panel (required)
     * title - Title of the page, shows up as tab name, for example (optional, defaults to the name)
     * headline - Heading on the page (optional, defaults to the name)

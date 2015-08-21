@@ -2,7 +2,7 @@
 | ------------ | ------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | slug         | optional      | happy_labor_day                      | Page SEO friendly portion of URL                                                                             |
 | path         | optional      | /billsmith/happy_labor_day           | URL path that locates the page on the website                                                                |
-| status       | required      | published                            | drafted or published                                                                                         |
+| status       | required      | published                            | unlisted or published                                                                                        |
 | site_slug    | readonly      | foobar                               | The slug of the website the page is contained on                                                             |
 | name         | required      | Happy Labor Day!                     | A name for the page                                                                                          |
 | headline     | optional      | Celebrate the Labor movement with us | the headline of the page                                                                                     |
