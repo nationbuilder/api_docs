@@ -159,7 +159,7 @@ POST https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events
     "status": "unlisted",
     "name": "Fasting Day",
     "intro": "Take the 24hr nofoodchallenge!!!",
-    "time_zone": "-07:00",
+    "time_zone": "Pacific Time (US & Canada)",
     "start_time": "2013-05-08T17:00:00-00:00",
     "end_time": "2013-05-08T19:00:00-00:00",
     "contact": {
