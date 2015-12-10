@@ -1,19 +1,15 @@
-Blog Posts API
-===============
+# Blog Posts API
 Use the Blogs API to create and manage blog posts for a NationBuilder blog.
 
-Index Endpoint
---------------
-Show a list of the posts a blog has in the system
-GET /api/v1/sites/:site_slug/pages/blogs/:blog_id/posts
+## Index Endpoint
+Show a list of the posts a blog has in the system GET /api/v1/sites/:site_slug/pages/blogs/:blog_id/posts
 
 ### Attributes
-* `limit` - max number of results to show in one page of results (default 10, max 100).
-* `__nonce` - generated pagination nonce. Do not modify.
-* `__token` - generated pagination token. Do not modify.
+- `limit` - max number of results to show in one page of results (default 10, max 100).
+- `__nonce` - generated pagination nonce. Do not modify.
+- `__token` - generated pagination token. Do not modify.
 
 ### Example
-
 If you make a request like this:
 
 ```
@@ -61,19 +57,17 @@ Then you should get a 200 response with a body like this:
 }
 ```
 
-Match Endpoint
---------------
-Map an external service id to a NationBuilder blog post id
-GET /api/v1/sites/:site_slug/pages/blogs/:blog_id/posts/match
+## Match Endpoint
+Map an external service id to a NationBuilder blog post id GET /api/v1/sites/:site_slug/pages/blogs/:blog_id/match
 
 ### Attributes
-* external_id - the external id
+- external_id - the external id
 
 ### Example
 I have a wordpress blog that I have imported into NationBuilder via this API, and I want to edit one of the posts that was imported, to which I had attached the external id "wp_1234".  To edit the page I need the NationBuilder id, but I did not write it down.  To overcome this lack of information I can issue a request like this:
 
 ```
-GET https://foobar.nationbuilder.com/api/v1/sites/foobar/blogs/13/posts/match?external_id=wp_1234
+GET https://foobar.nationbuilder.com/api/v1/sites/foobar/blogs/13/match?external_id=wp_1234
 ```
 
 And get back a response like this:
@@ -84,13 +78,10 @@ And get back a response like this:
 }
 ```
 
-Show Endpoint
--------------
-Show the details of an individual blog post, including the content after the page change
-GET /api/v1/sites/:site_slug/pages/blogs/:blog_id/posts/:id
+## Show Endpoint
+Show the details of an individual blog post, including the content after the page change GET /api/v1/sites/:site_slug/pages/blogs/:blog_id/posts/:id
 
 ### Example
-
 When you make a request like this:
 
 ```
@@ -120,30 +111,27 @@ Then you should get a 200 response with a body like this:
 }
 ```
 
-
-Create Endpoint
----------------
-Create a blog post in NationBuilder
-POST /api/v1/sites/:site_slug/pages/blogs/:blog_id/posts
+## Create Endpoint
+Create a blog post in NationBuilder POST /api/v1/sites/:site_slug/pages/blogs/:blog_id/posts
 
 ### Attributes:
-* blog attributes - the properties you wish to attach to the blog to be made
-    * slug - the path at which to place the page.  Must be unique, and there are some restrictions for namespace collisions. (Optional- will be computed from name if not present)
-    * status - published or unlisted, depending on whether you want to page to be available immediately (required)
-    * author_id - the NationBuilder id author of the blog post (optional)
-    * name - internal name, how the page will be referred to in lists in the control panel (required)
-    * title - Title of the page, shows up as tab name, for example (optional, defaults to the name)
-    * headline - Heading on the page (optional, defaults to the name)
-    * excerpt - meta attribute for SEO - description (optional)
-    * external_id - the unique identifier for this resource in an external service (optional)
-    * tags - list of tags (optional)
-    * published_at - when the blog was published (optional)
-    * content_before_flip - the content of the blog post to be shown on the posts index, typically used as teaser content.  Put the entire blog post content into this field to have it.  (one form of content is required). Content is sanitized before persistence.
-    * content_after_flip - content of the blog post to be shown only on the full post page.  The full post page combines the content_before_flip to the content_after_flip
+- blog attributes - the properties you wish to attach to the blog to be made
+  - slug - the path at which to place the page.  Must be unique, and there are some restrictions for namespace collisions. (Optional- will be computed from name if not present)
+  - status - published or unlisted, depending on whether you want to page to be available immediately (required)
+  - author_id - the NationBuilder id author of the blog post (optional)
+  - name - internal name, how the page will be referred to in lists in the control panel (required)
+  - title - Title of the page, shows up as tab name, for example (optional, defaults to the name)
+  - headline - Heading on the page (optional, defaults to the name)
+  - excerpt - meta attribute for SEO - description (optional)
+  - external_id - the unique identifier for this resource in an external service (optional)
+  - tags - list of tags (optional)
+  - published_at - when the blog was published (optional)
+  - content_before_flip - the content of the blog post to be shown on the posts index, typically used as teaser content.  Put the entire blog post content into this field to have it.  (one form of content is required). Content is sanitized before persistence.
+  - content_after_flip - content of the blog post to be shown only on the full post page.  The full post page combines the content_before_flip to the content_after_flip
 
 ### Example
-
 If you make a request like this:
+
 ```
 POST https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/blogs/10/posts
 ```
@@ -165,6 +153,7 @@ With a body like this:
 ```
 
 You should get a 200 response with a body like this:
+
 ```json
 {
   "blog": {
@@ -189,10 +178,8 @@ You should get a 200 response with a body like this:
 
 Then the blog post will be entered into NationBuilder, and available to view immediately
 
-Update Endpoint
----------------
-Update the attributes of a blog.  Note that this is an update of all properties of the page, partial updates are not supported.
-PUT /api/v1/sites/:site_slug/pages/blogs/:id
+## Update Endpoint
+Update the attributes of a blog.  Note that this is an update of all properties of the page, partial updates are not supported. PUT /api/v1/sites/:site_slug/pages/blogs/:id
 
 ### Example
 
@@ -242,14 +229,10 @@ That should update the page to have the new title, and return a response code of
 }
 ```
 
-
-Destroy Endpoint
-----------------
-Remove a blog from NationBuilder
-DELETE /api/v1/sites/:site_slug/pages/blogs/:blog_id/posts/:id
+## Destroy Endpoint
+Remove a blog from NationBuilder DELETE /api/v1/sites/:site_slug/pages/blogs/:blog_id/posts/:id
 
 ### Example
-
 Issuing a request like this:
 
 ```
