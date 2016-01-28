@@ -205,6 +205,7 @@ Resources
 * `van_id` - this person’s ID from VAN
 * `village_district` - a district field
 * `voter_updated_at` - the last time voter data was gathered for this person
+* `ward` - district field
 * `warnings_count` - the number of warnings this person has received
 * `website` - the URL of this person’s website
 * `work_address` - an address resource representing this person’s work address
@@ -266,6 +267,7 @@ Resources
 * `updated_at` - the timestamp representing when this person was last updated
 * `van_id` - this person’s ID from VAN
 * `village_district` - district field
+* `ward` - district field
 
 
 ### Address Resource
