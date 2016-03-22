@@ -2006,9 +2006,9 @@ You will receive a response of status 201, with response body like this:
 Push Endpoint
 -------------
 
-This endpoint attempts to match the input person resource to a person already in the nation. If
-a match is found, the matched person is updated. If a match is not found, a new person is created.
-Matches are found by including one of the following IDs in the request:
+This endpoint attempts to match the input person resource to a person already in the nation. If a match is found,
+the matched person is updated and a 200 status code is returned. If a match is not found, a new person is
+created and a 201 status code is returned. Matches are found by including one of the following IDs in the request:
 
 * `civicrm_id`
 * `county_file_id`
@@ -2271,7 +2271,7 @@ With this attached request body:
 }
 ```
 
-A new record will be created with the provided attributes and you will receive a response of status 200, with response body like this:
+A new record will be created with the provided attributes and you will receive a response of status 201, with response body like this:
 
 ```json
 {
