@@ -20,7 +20,7 @@ GET https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/calendars
 
 ```json
 {
-  "next": "/api/v1/foobar/pages/calendars?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m",
+  "next": "/api/v1/sites/foobar/pages/calendars?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m",
   "prev": null,
   "results": [
     {
