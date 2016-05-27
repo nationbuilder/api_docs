@@ -15,7 +15,7 @@ GET /api/v1/sites/:site_slug/pages/calendars
 ### Example
 
 ```
-GET https://foobar.nationbuilder.com/api/v1/foobar/pages/calendars
+GET https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/calendars
 ```
 
 ```json
