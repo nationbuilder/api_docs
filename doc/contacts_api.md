@@ -8,16 +8,17 @@ Resources
 
 ### Contact Resource
 
-Name           | Description                                                                                     | Writable | Required | Example Value(s)
----------------|-------------------------------------------------------------------------------------------------|----------|----------|------------------------------|
-type_id        | id of the contact type. For possible values use the Contact Types API.                          |  Y       | Y        | 5                            |
-method         | the method through which the contact was made. For possible values use the Contact Methods API. |  Y       | Y        | door_knock                   |
-sender_id      | id of the person who made the contact.                                                          |  Y       | Y        | 63                           |
-recipient_id   | id of the person who receives the contact.                                                      |  N       | N        | 342                          |
-status         | status of the contact. For possible values use the Contact Statuses API.                        |  Y       | N        | not_interested               |
-broadcaster_id | id of the broadcaster on whose behalf the sender made the contact                               |  Y       | N        | 8123                         |
-note           | note about the content of the contact                                                           |  Y       | N        | He did not support the cause |
-created_at     | timestamp representing when the contact was created                                             |  Y       | N        | 2014-02-14T14:36:29-05:00    |
+Name             | Description                                                                                     | Writable | Required | Example Value(s)
+-----------------|-------------------------------------------------------------------------------------------------|----------|----------|------------------------------|
+type_id          | id of the contact type. For possible values use the Contact Types API.                          |  Y       | Y        | 5                            |
+method           | the method through which the contact was made. For possible values use the Contact Methods API. |  Y       | Y        | door_knock                   |
+sender_id        | id of the person who made the contact.                                                          |  Y       | Y        | 63                           |
+recipient_id     | id of the person who receives the contact.                                                      |  N       | N        | 342                          |
+status           | status of the contact. For possible values use the Contact Statuses API.                        |  Y       | N        | not_interested               |
+broadcaster_id   | id of the broadcaster on whose behalf the sender made the contact                               |  Y       | N        | 8123                         |
+note             | note about the content of the contact                                                           |  Y       | N        | He did not support the cause |
+capital_in_cents | social or political capital for the contact, in cents                                           |  Y       | N        | 100                          |
+created_at       | timestamp representing when the contact was created                                             |  Y       | N        | 2014-02-14T14:36:29-05:00    |
 
 Index Endpoint
 --------------
@@ -57,6 +58,7 @@ You will receive a response of status 200, with response body like this:
       "status": "left_message",
       "broadcaster_id": null,
       "note": null,
+      "capital_in_cents": 0,
       "created_at": "2014-02-14T14:36:29-05:00"
     }
   ]
@@ -94,6 +96,7 @@ With attached body content like this:
     "status": "not_interested",
     "method": "door_knock",
     "type_id": 5,
+    "capital_in_cents": 10,
     "note": "He did not support the cause"
   }
 }
@@ -111,6 +114,7 @@ You will receive a response of status 200, with response body like this:
     "method": "door_knock",
     "type_id": 5,
     "note": "He did not support the cause",
+    "capital_in_cents": 10,
     "created_at": "2014-02-14T14:36:29-05:00"
   }
 }
