@@ -9,10 +9,9 @@ The index endpoint provides a paginated list of the paths in a nation.
 GET /api/v1/paths
 ```
 ### Parameters
-
-*`limit` - max number of results to show in one page of results (default 10, max 100).
-*`__nonce` - generated pagination nonce. Do not modify.
-*`__token` - generated pagination token. Do not modify.
+* `limit` - max number of results to show in one page of results (default 10, max 100).
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 
 ### Example
 If you make a request like this:
