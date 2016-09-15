@@ -1,19 +1,20 @@
-# Paths API
+Paths API
+============
 The paths API allows you to index all paths contained in a nation and returns the path ID and path steps that are associated with that path.
 
-##Index Endpoint
-
+Index Endpoint
+--------------
 The index endpoint provides a paginated list of the paths in a nation.
 ```
 GET /api/v1/paths
 ```
-###Parameters
+### Parameters
 
--`limit` - max number of results to show in one page of results (default 10, max 100).
--`__nonce` - generated pagination nonce. Do not modify.
--`__token` - generated pagination token. Do not modify.
+*`limit` - max number of results to show in one page of results (default 10, max 100).
+*`__nonce` - generated pagination nonce. Do not modify.
+*`__token` - generated pagination token. Do not modify.
 
-###Example
+### Example
 If you make a request like this:
 ```
 GET https://foobar.nationbuilder.com/api/v1/paths
