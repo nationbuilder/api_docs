@@ -75,7 +75,7 @@ These are the steps necessary to start using the API to access resources through
     With this access token you can make requests on the user's behalf. See our API endpoint documentation for full details, but as an example, this is the request you would use to get the first page of people in a nation:
 
     ```
-    GET https://foobar.nationbuilder.com/api/v1/people?access_token=...
+    GET https://{slug}.nationbuilder.com/api/v1/people?access_token=...
     ```
 
     Note that the API speaks only in javascript object notation (JSON), and that 406 response code means that you need to include the Content-Type and Accept headers of your request to "application/json".
