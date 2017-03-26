@@ -45,7 +45,7 @@ These are the steps necessary to start using the API to access resources through
     Exchange that code for an access token by issuing a request for one like this:
 
     ```
-    POST https://foobar.nationbuilder.com/oauth/token
+    POST https://{slug}.nationbuilder.com/oauth/token
       client_id=...
       redirect_uri=...
       grant_type=authorization_code
@@ -56,7 +56,7 @@ These are the steps necessary to start using the API to access resources through
     A practical example is using the command line utility cURL like this:
 
     ```bash
-    curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" --data '{"grant_type":"authorization_code", "code":"{code}", "client_id":"{client_id}", "client_secret":"{client_secret}", "redirect_uri":"{redirect_uri}"}' https://foobar.nationbuilder.com/oauth/token
+    curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" --data '{"grant_type":"authorization_code", "code":"{code}", "client_id":"{client_id}", "client_secret":"{client_secret}", "redirect_uri":"{redirect_uri}"}' https://{slug}.nationbuilder.com/oauth/token
     ```
 
     This request will receive a response like this:
@@ -75,7 +75,7 @@ These are the steps necessary to start using the API to access resources through
     With this access token you can make requests on the user's behalf. See our API endpoint documentation for full details, but as an example, this is the request you would use to get the first page of people in a nation:
 
     ```
-    GET https://foobar.nationbuilder.com/api/v1/people?access_token=...
+    GET https://{slug}.nationbuilder.com/api/v1/people?access_token=...
     ```
 
     Note that the API speaks only in javascript object notation (JSON), and that 406 response code means that you need to include the Content-Type and Accept headers of your request to "application/json".
