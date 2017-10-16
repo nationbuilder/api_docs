@@ -10,7 +10,7 @@ Resources
 
 Name             | Description                                                                                     | Writable | Required | Example Value(s)
 -----------------|-------------------------------------------------------------------------------------------------|----------|----------|------------------------------|
-type_id          | id of the contact type. For possible values use the Contact Types API.                          |  Y       | Y        | 5                            |
+type_id          | id of the contact type. For possible values use the Contact Types API.                          |  Y       | N        | 5                            |
 method           | the method through which the contact was made. For possible values use the Contact Methods API. |  Y       | Y        | door_knock                   |
 sender_id        | id of the person who made the contact.                                                          |  Y       | Y        | 63                           |
 recipient_id     | id of the person who receives the contact.                                                      |  N       | N        | 342                          |
