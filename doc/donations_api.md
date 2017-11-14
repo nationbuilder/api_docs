@@ -236,7 +236,196 @@ GET https://foobar.nationbuilder.com/api/v1/donations?limit=1
    ]
 }
 ```
+Search Endpoint
+--------------
 
+Use this endpoint to find donation records that have a certain attribute.
+
+```
+GET /api/v1/donations/search
+```
+
+### Parameters
+* `succeeded_since` - donations succeeded since the given date
+* `created_since` - donations created since the given date
+* `failed_since` - donations that failed to process since the given date
+
+### Example
+
+```
+GET https://foobar.nationbuilder.com/api/v1/donations/search?succeeded_since=2016-11-09T10:39:38-08:00
+```
+
+```json
+{
+  "results": [
+    {
+      "actblue_order_number": null,
+      "amount": "$345.00",
+      "amount_in_cents": 34500,
+      "authorization": null,
+      "author_id": 1,
+      "billing_address": {
+        "address1": "1231 Hyperion Ave  Los Angeles CA 90029 USA ",
+        "address2": "",
+        "address3": null,
+        "city": "",
+        "county": null,
+        "state": null,
+        "country_code": "",
+        "zip": null,
+        "lat": null,
+        "lng": null,
+        "fips": null,
+        "street_number": "1231",
+        "street_prefix": null,
+        "street_name": "Hyperion Ave  Los Angeles CA 90029 USA ",
+        "street_type": null,
+        "street_suffix": null,
+        "unit_number": null,
+        "zip4": null,
+        "zip5": null,
+        "sort_sequence": null,
+        "delivery_point": null,
+        "lot": null,
+        "carrier_route": null
+      },
+      "canceled_at": null,
+      "check_number": null,
+      "corporate_contribution": false,
+      "created_at": "2017-11-09T10:39:38-08:00",
+      "donor": {
+        "birthdate": "1990-12-21",
+        "city_district": "13",
+        "civicrm_id": null,
+        "county_district": "1",
+        "county_file_id": null,
+        "created_at": "2017-11-06T17:08:03-08:00",
+        "datatrust_id": null,
+        "do_not_call": false,
+        "do_not_contact": false,
+        "dw_id": null,
+        "email": "dunne+1@nationbuilder.com",
+        "email_opt_in": true,
+        "employer": null,
+        "external_id": null,
+        "federal_district": "28",
+        "fire_district": null,
+        "first_name": "Jeff",
+        "has_facebook": true,
+        "id": 1425180,
+        "is_twitter_follower": false,
+        "is_volunteer": false,
+        "judicial_district": null,
+        "labour_region": null,
+        "last_name": "Dunne",
+        "linkedin_id": null,
+        "mobile": null,
+        "mobile_opt_in": true,
+        "nbec_guid": null,
+        "ngp_id": null,
+        "note": null,
+        "occupation": null,
+        "party": null,
+        "pf_strat_id": null,
+        "phone": null,
+        "precinct_id": null,
+        "primary_address": {
+          "address1": "1231 Hyperion Ave",
+          "address2": null,
+          "address3": null,
+          "city": "Los Angeles",
+          "county": "Los Angeles",
+          "state": "CA",
+          "country_code": "US",
+          "zip": "90029",
+          "lat": "34.094749",
+          "lng": "-118.2780302",
+          "fips": null,
+          "street_number": "1231",
+          "street_prefix": null,
+          "street_name": "Hyperion",
+          "street_type": "Ave",
+          "street_suffix": null,
+          "unit_number": null,
+          "zip4": null,
+          "zip5": "90029",
+          "sort_sequence": null,
+          "delivery_point": null,
+          "lot": null,
+          "carrier_route": null
+        },
+        "profile_image_url_ssl": "https://d3n8a8pro7vhmx.cloudfront.net/assets/icons/buddy.png",
+        "recruiter_id": null,
+        "rnc_id": null,
+        "rnc_regid": null,
+        "salesforce_id": null,
+        "school_district": "19647330000000",
+        "school_sub_district": "5",
+        "sex": "M",
+        "signup_type": 0,
+        "state_file_id": null,
+        "state_lower_district": "51",
+        "state_upper_district": "24",
+        "support_level": null,
+        "supranational_district": null,
+        "tags": [
+          "Matched"
+        ],
+        "twitter_id": null,
+        "twitter_name": null,
+        "updated_at": "2017-11-13T06:24:22-08:00",
+        "van_id": null,
+        "village_district": null,
+        "ward": null,
+        "work_phone_number": null,
+        "multiple_choice": null,
+        "voterockit_address_belong_to_": null,
+        "voterockit_address_belong_to": null,
+        "voter_circle_open": null,
+        "haystaq": null,
+        "hilary_supporter": null,
+        "vidyard": null,
+        "instagram_like_count": null,
+        "instagram_comment_count": null,
+        "instagram_username": null
+      },
+      "donor_id": 1425180,
+      "election": {
+        "cycle": "2020",
+        "period": "Primary",
+        "period_ngp_code": "P"
+      },
+      "email": "dunne+1@nationbuilder.com",
+      "employer": "",
+      "failed_at": null,
+      "fec_type": "Contribution",
+      "fec_type_ngp_code": "C",
+      "first_name": "Jeff",
+      "id": 395,
+      "import_id": null,
+      "is_private": true,
+      "last_name": "Dunne",
+      "mailing_slug": null,
+      "merchant_account_id": null,
+      "ngp_id": null,
+      "note": "",
+      "occupation": "",
+      "page_slug": null,
+      "payment_type_name": "Cash",
+      "payment_type_ngp_code": "C",
+      "pledge_id": null,
+      "recruiter_name_or_email": "Jeff Dunne",
+      "recurring_donation_id": null,
+      "succeeded_at": "2017-11-09T10:39:00-08:00",
+      "tracking_code_slug": null,
+      "updated_at": "2017-11-09T10:39:38-08:00",
+      "work_address": null
+    }
+  ],
+  "next": "/api/v1/donations/search?__nonce=APcxjqC717ztKJw-iwZ2Ng\u0026__token=ADR6Ed2YQdyEpM2YRgu7q_X0ZiJ0rSUNk8D-3IYvre6a\u0026limit=1\u0026succeeded_since=2016-11-09T10%3A39%3A38-08%3A00",
+  "prev": null
+```
 Create Endpoint
 ---------------
 
