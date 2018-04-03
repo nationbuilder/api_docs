@@ -278,14 +278,14 @@ Resources
 * `city` - city
 * `state` - state
 * `zip` - zip code
-* `country_code` - country code
+* `country_code` - country code (using ISO-3166-1 alpha-2)
 * `lat` - latitude (using WGS-84)
 * `lng` - longitude (using WGS-84)
 
 ### Ballot Resource
 
 * `cast_at` - when the ballot was cast,
-* `country_code` - country code for the country the ballot was cast (required),
+* `country_code` - country code (using ISO-3166-1 alpha-2) for the country the ballot was cast (required),
 * `election_at` - when the election was held (required),
 * `election_period` - the type of election (General, Primary, Presidential Primary, or Special, not case sensitive, not required for international elections),
 * `party` - party for primary elections (http://nationbuilder.com/political_party_codes),
