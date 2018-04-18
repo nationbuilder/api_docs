@@ -249,6 +249,7 @@ GET /api/v1/donations/search
 * `succeeded_since` - donations succeeded since the given date
 * `created_since` - donations created since the given date
 * `failed_since` - donations that failed to process since the given date
+* `donor_id` - the id of the donor, the response returns all donations made by this record
 
 ### Example
 
