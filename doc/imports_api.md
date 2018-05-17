@@ -17,14 +17,14 @@ POST /api/v1/imports
 Attributes availalbe are for the person directly, relation fields such as those for addresses, voting history, custom fields and recruiters need to be prefixed by their relations name, for example:
 - `mailing_address.zip`
 - `ballots.vote_method`
-- `custom_field.[custom field slug`, (ex. `custom_fields.university_name)
+- `custom_field.[custom field slug`, (ex. `custom_fields.university_name`)
 - `recruiter.id` or `recruiter.email`
 
 Required ballot import attributes:
 - `ballots.vote_method` - Required field with possible values of voted, early, or absentee
 - `election.county_code` - Required 2 letter code from ISO 3166
 - `election.election_at` - Required date of the election in MM/DD/YYYY format
-- 'election.state` - Required 2 letter code if the election is within the United States
+- `election.state` - Required 2 letter code if the election is within the United States
 
 The ballot file being imported must contain one of the following:
 - `state_file.id` and `registered_address.state`, or
