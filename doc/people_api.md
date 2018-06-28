@@ -161,6 +161,7 @@ Resources
 * `profile_content` - the content for this person’s public profile
 * `profile_headline` - the headline for this person’s public profile
 * `received_capital_amount_in_cents` - the aggregate amount of political capital ever received by this person
+* `profile_image_url_ssl` - the URL for this person's thumbnail image
 * `recruiter_id` - the ID of the person who recruited this person
 * `recruiter` - an abbreviated person resource representing the person who recruited this person
 * `recruits_count` - the number of people that were recruited by this person
@@ -384,6 +385,7 @@ GET https://foobar.nationbuilder.com/api/v1/people
         "lat": 34.0502,
         "lng": -117.2478
       },
+      "profile_image_url_ssl": null,
       "recruiter_id": null,
       "rnc_id": 2653431,
       "rnc_regid": "003F4ED9-3C5C-4E15-8178-B84920F41BFF",
@@ -711,6 +713,7 @@ You will receive a response of status 200, with response body like this:
       "phone": "2156726335",
       "precinct_id": null,
       "primary_address": null,
+      "profile_image_url_ssl": null,
       "recruiter_id": null,
       "rnc_id": 2653431,
       "rnc_regid": "003F4ED9-3C5C-4E15-8178-B84920F41BFF",
@@ -833,6 +836,7 @@ You will receive a response with a body like this if the person exists:
         "phone": "2156726335",
         "precinct_id": 77,
         "primary_address": null,
+        "profile_image_url_ssl": null,
         "recruiter_id": 233,
         "rnc_id": 1234567,
         "rnc_regid": "003F4ED9-3C5C-4E15-8178-B84920F41BFF",
@@ -1003,6 +1007,7 @@ You will receive a response with a body like this if the person exists:
             "phone": "2156726335",
             "precinct_id": null,
             "primary_address": null,
+            "profile_image_url_ssl": null,
             "recruiter_id": null,
             "rnc_id": 2653431,
             "rnc_regid": "003F4ED9-3C5C-4E15-8178-B84920F41BFF",
@@ -1157,6 +1162,7 @@ Should give you a response like this:
         "lat": 34.0502,
         "lng": -117.2478
       },
+      "profile_image_url_ssl": null,
       "recruiter_id": 10800,
       "rnc_id": 1234567,
       "rnc_regid": "003F4ED9-3C5C-4E15-8178-B84920F41BFF",
@@ -1258,6 +1264,7 @@ You should receive a response like this:
         "lat": "34.0522",
         "lng": "-118.2428"
       },
+      "profile_image_url_ssl": null,
       "recruiter_id": null,
       "rnc_id": 2653431,
       "rnc_regid": "003F4ED9-3C5C-4E15-8178-B84920F41BFF",
@@ -1527,6 +1534,7 @@ You will receive a response of status 200, with response body like this:
       "lat": null,
       "lng": null
     },
+    "profile_image_url_ssl": null,
     "recruiter_id": null,
     "rnc_id": null,
     "rnc_regid": null,
@@ -1777,6 +1785,7 @@ You will receive a response of status 201, with response body like this:
     "phone": "303-555-0841",
     "precinct_id": 55,
     "primary_address": null,
+    "profile_image_url_ssl": null,
     "recruiter_id": 89,
     "rnc_id": 1234567,
     "rnc_regid": "003F4ED9-3C5C-4E15-8178-B84920F41BFF",
@@ -1947,6 +1956,7 @@ You will receive a response of status 201, with response body like this:
       "phone": "2156726335",
       "precinct_id": null,
       "primary_address": null,
+      "profile_image_url_ssl": null,
       "recruiter_id": null,
       "rnc_id": 2653431,
       "rnc_regid": "003F4ED9-3C5C-4E15-8178-B84920F41BFF",
@@ -2084,6 +2094,7 @@ Should update the existing record to have the new name and sex, return status co
     "phone": "2156726335",
     "precinct_id": null,
     "primary_address": null,
+    "profile_image_url_ssl": null,
     "recruiter_id": null,
     "rnc_id": 2653431,
     "rnc_regid": "003F4ED9-3C5C-4E15-8178-B84920F41BFF",
@@ -2311,6 +2322,7 @@ A new record will be created with the provided attributes and you will receive a
     "phone": null,
     "precinct_id": null,
     "primary_address": null,
+    "profile_image_url_ssl": null,
     "recruiter_id": null,
     "rnc_id": null,
     "rnc_regid": null,
@@ -2570,6 +2582,7 @@ You will receive a response of status 200 and a body like this:
     "phone": "2156726335",
     "precinct_id": null,
     "primary_address": null,
+    "profile_image_url_ssl": null,
     "recruiter_id": null,
     "rnc_id": 2653431,
     "rnc_regid": "003F4ED9-3C5C-4E15-8178-B84920F41BFF",
