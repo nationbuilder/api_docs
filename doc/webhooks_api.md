@@ -119,12 +119,12 @@ Should create the webhook, respond with 200 and a body like this:
 
 Destroy Endpoint
 ----------------
-Remove a webhook to have NationBuilder stop sending events to the endpoint
+Remove a webhook to have NationBuilder stop sending events to the endpoint.
 
 ### Example
 
 ```
-DELETE https://foobar.nationbuilder.com/api/v1/webhooks
+DELETE https://foobar.nationbuilder.com/api/v1/webhooks/:id
 ```
 
 Should remove the webhook and return an empty response with status code 204.
