@@ -1076,6 +1076,7 @@ GET /api/v1/people/search
 ### Parameters
 * `first_name` - first name search parameter
 * `last_name` - last name search parameter
+* `email` - email address search parameter
 * `city` - city of the primary address of people to match
 * `state` - state of the primary address of people to match
 * `sex` - sex of the people to match (optional, M or F)
