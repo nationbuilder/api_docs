@@ -1083,7 +1083,7 @@ GET /api/v1/people/search
 * `birthdate` - date of birth of the people to match
 * `updated_since` - people updated since the given date
 * `with_mobile` - only people with mobile phone numbers
-* `custom_values` - match custom field values. It takes a nested format, e.g. `{"custom_values": {"my_field_slug": "abcd"}}`. In the query string this parameter would have to be encoded as `custom_values%5Bmy_field_slug%5D=abcd`.
+* `custom_values` - match custom field values. It takes a nested format, e.g. `{"custom_values": {"my_field_slug": "abcd"}}`. In the query string this parameter would have to be encoded as `custom_values[my_field_slug]=abcd`.
 * `civicrm_id` - civicrm_id of the person to match
 * `county_file_id` - county_file_id of the person to match
 * `state_file_id` - state_file_id of the person to match
