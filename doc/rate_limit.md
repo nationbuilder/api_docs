@@ -1,7 +1,7 @@
 NationBuilder API Rate Limit Policy
 ===================================
 
-Updated 19 August 2013
+Updated 11 March 2020
 
 Our rate limiting policy is a per-access token limit.
 
